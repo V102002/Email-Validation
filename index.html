@@ -26,7 +26,9 @@
     </p>
     <form name="form" onsubmit="return myFun(event)">
         <input id="text" placeholder="Email Address" name="email" type="text" value="">
-        <button type="submit" value="Submit"><img src="./images/icon-arrow.svg" alt=""></button>
+        <button type="submit" aria-label="Subscribe">
+          <img src="./images/icon-arrow.svg" alt="Arrow Icon">
+        </button>
         <img id="wrong" src="./images/icon-error.svg" alt="">
         <p id="error">Please type a valid email</p>
     </form>
