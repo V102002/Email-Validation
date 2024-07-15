@@ -29,3 +29,20 @@ function myFun(event) {
     event.preventDefault();
     return true; // Allow form submission
 }
+const img = document.querySelector(".image");
+
+function updateImageSrc() {
+    if (window.innerWidth <= 500) {
+        img.src = "./images/hero-mobile.jpg";
+    } else {
+        img.src = "./images/hero-desktop.jpg"; // Add this line to switch back to the desktop image when the width is above 500px
+    }
+}
+
+// Initial check
+updateImageSrc();
+
+// Listen for window resize events
+window.addEventListener("resize", updateImageSrc);
+
+
